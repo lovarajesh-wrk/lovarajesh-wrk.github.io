@@ -1,99 +1,293 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lova Rajesh Chavakula | Unity Lead Developer</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lova Rajesh Chavakula | Lead Unity Developer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-	<img src="profile.png" alt="Lova Rajesh Chavakula" class="profile-photo">
-    <h1>Lova Rajesh Chavakula</h1>
-    <p class="subtitle">Lead Unity Developer | Game Architect | Team Mentor</p>
-    <nav>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <img src="profile.png" alt="Lova Rajesh Chavakula" class="profile-photo">
+    <p class="eyebrow">Lead Unity Developer &nbsp;—&nbsp; Game Architect &nbsp;—&nbsp; Team Mentor</p>
+    <h1>Lova Rajesh<br>Chavakula</h1>
+    <p class="hero-tagline">Fifteen years turning ambitious briefs into shipped, played, and loved games — from arcade classics to living MMOs.</p>
+
+    <nav aria-label="Section navigation">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+
+    <a class="btn-primary" href="lova_rajesh_resume.pdf" download>
+      <span>Download Résumé</span>
+    </a>
+  </div>
+
+  <div class="stat-strip">
+    <div class="stat">
+      <span class="stat-num">15<span class="stat-plus">+</span></span>
+      <span class="stat-label">Years Shipping</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">20<span class="stat-plus">+</span></span>
+      <span class="stat-label">Games Shipped</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">500K<span class="stat-plus">+</span></span>
+      <span class="stat-label">Daily Players</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">#1</span>
+      <span class="stat-label">In 70+ Countries</span>
+    </div>
+  </div>
+</header>
+
+<main>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      With over 15 years of experience designing and shipping mobile, PC, and console games, I have led cross-functional teams to deliver award-winning titles such as <strong>PAC-MAN</strong>, <strong>School of Dragons</strong>, <strong>StarChef</strong>, and <strong>Maya the Bee: Flower Party</strong>.
-      My expertise spans Unity C# architecture, multiplayer frameworks (Photon, Mirror), LiveOps pipelines, and performance optimization.
-    </p>
-    <p>
-      I thrive in collaborative environments, mentoring teams to implement scalable and performance-driven architectures. My goal is to deliver engaging, high-quality games across platforms.
-    </p>
-    <a class="button" href="lova_rajesh_resume.pdf" download>📄 Download Resume</a>
+    <p class="section-eyebrow">// about</p>
+    <h2>Player one, always ready.</h2>
+    <div class="about-copy">
+      <p>
+        I've spent over fifteen years designing and shipping games — eleven titles and counting across iOS,
+        Android, PC, and Windows — leading cross-functional teams on titles including <strong>PAC-MAN</strong>,
+        <strong>School of Dragons</strong>, <strong>StarChef</strong>, and <strong>Maya the Bee: Flower Party</strong>.
+        My focus is Unity C# architecture, multiplayer frameworks, LiveOps pipelines, and squeezing frame budget
+        out of stubborn hardware.
+      </p>
+      <p>
+        I do my best work mentoring teams toward scalable, performance-first architecture — the kind that
+        survives a live launch and keeps shipping updates for years after.
+      </p>
+    </div>
+    <ul class="skill-pills">
+      <li>Unity C#</li>
+      <li>Multiplayer Architecture</li>
+      <li>Photon</li>
+      <li>Mirror</li>
+      <li>LiveOps Pipelines</li>
+      <li>Performance Optimization</li>
+      <li>Team Mentorship</li>
+      <li>Cross-Platform Shipping</li>
+    </ul>
   </section>
 
   <section id="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="project">
-      <h3>Maya the Bee: Flower Party</h3>
-      <p><strong>Platforms:</strong> iOS, Android, Windows</p>
-      <p>This title features puzzle mini-games and a 3D interactive party scene.</p>
-      <p><a href="https://www.youtube.com/watch?v=j-Aehzdnv_E" target="_blank">Watch Video</a></p>
+    <div class="section-head">
+      <p class="section-eyebrow">// level select</p>
+      <h2>Flagship titles.</h2>
+      <p class="section-sub">Pick a cartridge — each one shipped, live, and played by real players. More on the shelf below.</p>
     </div>
 
-    <div class="project">
-      <h3>PAC-MAN</h3>
-      <p><strong>Platforms:</strong> iOS, Android</p>
-      <p>A modern Unity-powered version of the classic puzzle and maze game, optimized for cross-platform play.</p>
-      <p><a href="https://www.youtube.com/watch?v=GTuTGe8UDtk" target="_blank">Watch Video</a></p>
+    <div class="carousel-wrap">
+      <button class="car-btn car-prev" id="carPrev" aria-label="Previous project">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <ul class="carousel" id="carousel">
+
+        <li class="card card-maya">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+              <circle cx="30" cy="30" r="4" fill="var(--paper)" opacity=".5"/>
+              <circle cx="60" cy="55" r="3" fill="var(--paper)" opacity=".35"/>
+              <circle cx="150" cy="25" r="5" fill="var(--paper)" opacity=".4"/>
+              <circle cx="175" cy="70" r="3" fill="var(--paper)" opacity=".3"/>
+              <path d="M100 20c-16 0-28 12-28 28 0 22 28 52 28 52s28-30 28-52c0-16-12-28-28-28z" fill="var(--card-accent-2)" opacity=".9"/>
+              <circle cx="100" cy="48" r="14" fill="var(--card-accent)"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-index">Level 01</span>
+            <h3>Maya the Bee: Flower Party</h3>
+            <div class="platform-tags"><span>Android</span><span>iOS</span><span>Microsoft</span><span>Yandex</span><span>Amazon</span></div>
+            <p class="card-teaser">Team lead, concept to release — core features built and optimized across 5 platforms.</p>
+            <span class="card-role">Role: Team Lead, concept to release</span>
+            <p class="card-full" hidden>I was team lead for the development team on Maya the Bee: Flower Party, contributing from
+            inception to full release. I implemented the majority of the game's features and collaborated
+            closely with the art and design teams to keep the experience cohesive and engaging, while
+            optimizing performance across low-end to high-end hardware on every target platform.</p>
+            <button class="card-toggle" type="button" aria-expanded="false">Read more</button>
+            <a href="https://www.youtube.com/watch?v=j-Aehzdnv_E" target="_blank" rel="noopener">Gameplay video <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+        <li class="card card-pacman">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+              <g fill="var(--paper)" opacity=".35">
+                <circle cx="20" cy="20" r="3"/><circle cx="40" cy="20" r="3"/><circle cx="60" cy="20" r="3"/><circle cx="80" cy="20" r="3"/>
+                <circle cx="20" cy="40" r="3"/><circle cx="80" cy="40" r="3"/>
+                <circle cx="20" cy="60" r="3"/><circle cx="40" cy="60" r="3"/><circle cx="60" cy="60" r="3"/><circle cx="80" cy="60" r="3"/>
+                <circle cx="120" cy="30" r="3"/><circle cx="140" cy="30" r="3"/><circle cx="160" cy="30" r="3"/><circle cx="180" cy="30" r="3"/>
+                <circle cx="120" cy="90" r="3"/><circle cx="140" cy="90" r="3"/><circle cx="160" cy="90" r="3"/><circle cx="180" cy="90" r="3"/>
+              </g>
+              <path d="M100 60 L134 40 A24 24 0 1 0 134 80 Z" fill="var(--card-accent)"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-index">Level 02</span>
+            <h3>PAC-MAN</h3>
+            <div class="platform-tags"><span>iOS</span><span>Android</span></div>
+            <p class="card-teaser">Lead Unity Developer — boosted performance and stability for millions of players.</p>
+            <span class="card-role">Role: Lead Unity Developer</span>
+            <p class="card-full" hidden>As Lead Unity Developer on the PAC-MAN mobile project, I focused on gameplay performance,
+            stability, and overall user experience — improving frame rates and reducing crashes to keep
+            gameplay smooth for millions of users. I refined core gameplay systems, integrated monetization
+            features, and ensured compatibility across iOS and Android, working closely with design, QA, and
+            production to ship updates efficiently, maintain code quality, and support live operations at scale.</p>
+            <button class="card-toggle" type="button" aria-expanded="false">Read more</button>
+            <a href="https://www.youtube.com/watch?v=GTuTGe8UDtk" target="_blank" rel="noopener">Gameplay video <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+        <li class="card card-starchef">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+              <path d="M70 75 h60 v10 a30 30 0 0 1 -60 0 z" fill="var(--card-accent-2)"/>
+              <path d="M75 75 c0 -22 10 -30 25 -30 s25 8 25 30" fill="none" stroke="var(--card-accent)" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="140" cy="30" r="5" fill="var(--paper)" opacity=".4"/>
+              <circle cx="155" cy="45" r="3" fill="var(--paper)" opacity=".3"/>
+              <circle cx="35" cy="35" r="4" fill="var(--paper)" opacity=".35"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-index">Level 03</span>
+            <h3>StarChef</h3>
+            <div class="platform-tags"><span>iOS</span><span>Android</span></div>
+            <p class="card-teaser">Ported StarChef from native iOS to a cross-platform Unity build.</p>
+            <span class="card-role">Role: Unity Port Lead, iOS → cross-platform</span>
+            <p class="card-full" hidden>StarChef is a social, role-playing restaurant-management game. It launched as a native
+            iOS title — I ported it to Unity to bring it to Android, then carried that Unity build forward to
+            support every platform going forward.</p>
+            <button class="card-toggle" type="button" aria-expanded="false">Read more</button>
+            <a href="https://apps.apple.com/us/app/star-chef-cooking-game/id594753075" target="_blank" rel="noopener">App Store <span aria-hidden="true">↗</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.NNGames.starchef_android&hl=en_IN" target="_blank" rel="noopener">Google Play <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+        <li class="card card-dragons">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+              <path d="M40 90 C 60 40, 100 40, 100 20 C 100 40, 140 40, 160 90" fill="none" stroke="var(--card-accent)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M100 20 L100 90" fill="none" stroke="var(--card-accent-2)" stroke-width="3" opacity=".6"/>
+              <circle cx="100" cy="20" r="6" fill="var(--card-accent-2)"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-index">Level 04</span>
+            <h3>School of Dragons</h3>
+            <div class="platform-tags"><span>iOS</span><span>Android</span><span>PC</span></div>
+            <p class="card-teaser">Joined this live MMO (500K+ daily players) to drive multiplayer sync and new features.</p>
+            <span class="card-role">Role: Senior Software Engineer, live-ops &amp; new features</span>
+            <p class="card-full" hidden>School of Dragons is an MMO built in Unity for PC, Facebook Gameroom, and mobile, with
+            500K+ daily players. I joined the live, already-shipped game and drove maintenance, multiplayer
+            sync, and new feature work.</p>
+            <button class="card-toggle" type="button" aria-expanded="false">Read more</button>
+            <a href="https://www.youtube.com/watch?v=CWDL_OKwsLs&list=PLA7yU36N05lRUNKflQljF5kB1WU_RLAiP" target="_blank" rel="noopener">Gameplay video <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
+
+      </ul>
+
+      <button class="car-btn car-next" id="carNext" aria-label="Next project">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
 
-    <div class="project">
-      <h3>StarChef</h3>
-      <p><strong>Platforms:</strong> iOS, Android</p>
-      <p>A strategy and management game combining cooking, simulation, and progression systems.</p>
-      <p>
-        <a href="https://apps.apple.com/us/app/star-chef-cooking-game/id594753075" target="_blank">iOS</a> |
-        <a href="https://play.google.com/store/apps/details?id=com.NNGames.starchef_android&hl=en_IN" target="_blank">Google Play</a>
-      </p>
-    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
 
-    <div class="project">
-      <h3>School of Dragons</h3>
-      <p><strong>Platforms:</strong> iOS, Android, Web</p>
-      <p>An MMO with 500K+ daily players, where I worked on multiplayer sync, live-ops, and backend systems.</p>
-	<p><a href="https://www.youtube.com/watch?v=CWDL_OKwsLs&list=PLA7yU36N05lRUNKflQljF5kB1WU_RLAiP" target="_blank">Watch Video</a></p>
+    <div class="archive">
+      <p class="archive-label">// bonus levels — also shipped</p>
+      <ul class="archive-grid">
+        <li><span class="archive-title">Carnival Slots</span><span class="archive-plat">iOS · Android</span></li>
+        <li><span class="archive-title">Spooky Treats</span><span class="archive-plat">iOS · Android</span></li>
+        <li><span class="archive-title">Fortunator</span><span class="archive-plat">iOS · Android</span></li>
+        <li><span class="archive-title">Hidden Object Engine</span><span class="archive-plat">iOS · Android · PC · Web</span></li>
+        <li><span class="archive-title">Smash and Survive</span><span class="archive-plat">iOS</span></li>
+        <li><span class="archive-title">Splash 3D</span><span class="archive-plat">iOS</span></li>
+        <li><span class="archive-title">The Brutal Spy</span><span class="archive-plat">iOS</span></li>
+      </ul>
+      <p class="archive-note">Plus early solo work porting PS3 titles to iOS, and mobile utility apps for Blackberry, Symbian, and Nokia — most predate app-store archives, so no links survive.</p>
     </div>
   </section>
 
   <section id="experience">
-    <h2>Experience Highlights</h2>
-    <ul>
-      <li><strong>SuperGaming – Lead Game Developer (2020–2025)</strong><br>
-      Led Unity mobile titles from architecture to deployment. Improved runtime stability and integrated analytics, ads, and LiveOps SDKs.</li>
+    <p class="section-eyebrow">// quest log</p>
+    <h2>Where I've played.</h2>
 
-      <li><strong>JumpStart Games – Senior Software Engineer (2016–2020)</strong><br>
-      Developed cross-platform MMO systems and multiplayer sync for School of Dragons.</li>
+    <ol class="quest-log">
+      <li>
+        <span class="quest-date">2020 — 2025</span>
+        <h3>Lead Game Developer <span>· SuperGaming</span></h3>
+        <p>Led Unity mobile titles from architecture through deployment. Improved runtime stability and integrated analytics, ads, and LiveOps SDKs.</p>
+      </li>
+      <li>
+        <span class="quest-date">Dec 2016 — 2020</span>
+        <h3>Senior Software Engineer <span>· JumpStart Games</span></h3>
+        <p>Built games for PC (Windows, Mac, Steam, Facebook Gameroom) and mobile — developed cross-platform MMO systems and multiplayer sync for School of Dragons.</p>
+      </li>
+      <li>
+        <span class="quest-date">May 2015 — Nov 2016</span>
+        <h3>Lead Game Developer <span>· 99Games</span></h3>
+        <p>Developed games for iOS and Android, including StarChef's Unity port and optimization for Android expansion.</p>
+      </li>
+      <li>
+        <span class="quest-date">Sept 2014 — Apr 2015</span>
+        <h3>Senior Game Programmer <span>· Digit88 Technologies</span></h3>
+        <p>Developed games for iOS and Android platforms.</p>
+      </li>
+      <li>
+        <span class="quest-date">Dec 2011 — Sept 2014</span>
+        <h3>Senior Game Programmer <span>· Dhruva Interactive</span></h3>
+        <p>Contributed to Maya the Bee: Flower Party from concept to release, reaching #1 in the Kids category across 70+ countries. Developed additional titles for iOS, Android, and Windows.</p>
+      </li>
+      <li>
+        <span class="quest-date">Oct 2010 — Nov 2011</span>
+        <h3>Mobile Game Developer <span>· Version2Games</span></h3>
+        <p>Sole programmer porting the company's PS3 titles to iOS, alongside independent game projects.</p>
+      </li>
+      <li>
+        <span class="quest-date">Feb 2010 — Oct 2010</span>
+        <h3>Software Developer <span>· Vimukti Technologies</span></h3>
+        <p>Developed mobile applications for Symbian, Blackberry, and iOS.</p>
+      </li>
+    </ol>
 
-      <li><strong>99Games – Lead Game Developer (2015–2016)</strong><br>
-      Managed StarChef’s Unity port and optimization for Android expansion.</li>
-
-      <li><strong>Dhruva Interactive – Senior Game Programmer (2011–2014)</strong><br>
-      Contributed to Maya the Bee: Flower Party from concept to release, achieving #1 in Kids category in 70+ countries.</li>
-    </ul>
+    <div class="education">
+      <p class="education-label">// education</p>
+      <p>B.Tech in Electronics and Communication, Gayatri Vidya Parishad College of Engineering, Visakhapatnam — 2008</p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:lovarajesh4work@gmail.com">lovarajesh4work@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/lova-rajesh-chavakula-00776541" target="_blank">linkedin.com/in/lova-rajesh-chavakula-00776541</a></p>
-    <p>Portfolio: <a href="https://lovarajesh.carrd.co/" target="_blank">lovarajesh.carrd.co</a></p>
+    <p class="section-eyebrow">// continue?</p>
+    <h2>Let's build the next one.</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:lovarajesh4work@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">lovarajesh4work@gmail.com</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/lova-rajesh-chavakula-00776541" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">/in/lova-rajesh-chavakula</span>
+      </a>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Lova Rajesh Chavakula | Built with ❤️ using GitHub Pages</p>
-  </footer>
+</main>
+
+<footer>
+  <p>© 2025 Lova Rajesh Chavakula — Insert coin to continue.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
